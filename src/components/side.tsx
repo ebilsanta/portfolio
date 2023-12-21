@@ -24,7 +24,6 @@ export default function Side({ children, orientation, heightToAppear } : SidePro
     } else {
         setIsVisible(false);
     }  
-    console.log(winScroll)
   };
 
   return (

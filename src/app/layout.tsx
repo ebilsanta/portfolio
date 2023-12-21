@@ -16,7 +16,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className="!scroll-smooth">
-      <title>Thaddeus' Portfolio</title>
+      <title>Thaddeus&apos; Portfolio</title>
       <body className={inter.className}>
         <NavBar/>
         {/* <Email/> */}
