@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import { projectsData } from "@/lib/data";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -23,11 +24,24 @@ export default function Project({
   const imageWidth = isHovered ? secondaryWidth : mainWidth;
   const imageHeight = isHovered ? secondaryHeight : mainHeight;
 
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"],
+  });
+  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
   return (
-    <div
+    <motion.div
       className="group mb-3 sm:mb-8 last:mb-0"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      ref={ref}
+      style={{
+        scale: scaleProgess,
+        opacity: opacityProgess,
+      }}
     >
       <section className="bg-gradient-to-r group-even:bg-gradient-to-l from-gray-100 max-w-[36rem] md:max-w-[64rem] rounded-s-lg overflow-hidden sm:pr-8 relative md:h-[22rem] hover:bg-gray-200 transition">
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 lg:pt-8 md:max-w-[60%] lg:max-w-[50%] flex flex-col h-full md:group-even:ml-[16rem] lg:group-even:ml-[30rem] xl:group-even:ml-[32rem]">
@@ -74,6 +88,6 @@ export default function Project({
           group-even:right-[initial] group-even:-left-64 group-even:md:-left-72 group-even:lg:-left-20 group-even:xl:left-0`}
         />
       </section>
-    </div>
+    </motion.div>
   );
 }

@@ -3,6 +3,21 @@
 import React from "react";
 import { skillsData } from "@/lib/data";
 import SectionHeading from "./section-heading";
+import { motion } from "framer-motion";
+
+const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.05 * index,
+    },
+  }),
+};
 
 export default function Skills() {
   return (
@@ -17,12 +32,17 @@ export default function Skills() {
           <ul className="flex flex-wrap justify-center gap-2 text-sm text-black mt-2 mb-4">
             {skillsData[section as keyof typeof skillsData].map(
               (skill, index) => (
-                <li
+                <motion.li
                   className="border-rose-500 border-2 rounded-full px-3 py-1 flex gap-2 items-center"
                   key={index}
+                  variants={fadeInAnimationVariants}
+                  initial="initial"
+                  whileInView="animate"
+                  custom={index}
                 >
-                  {skill.name} <span className="text-rose-500">{skill.icon}</span>
-                </li>
+                  {skill.name}{" "}
+                  <span className="text-rose-500">{skill.icon}</span>
+                </motion.li>
               )
             )}
           </ul>

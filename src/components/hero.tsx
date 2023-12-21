@@ -4,6 +4,7 @@ import Link from "next/link";
 import { BsArrowDown, BsLinkedin } from "react-icons/bs";
 import { MdOpenInNew } from "react-icons/md";
 import { FiGithub } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
@@ -19,15 +20,23 @@ export default function Hero() {
           />
         </div>
         <div className="flex flex-col gap-2 lg:gap-16">
-          <h1 className="text-xl text-center my-4 sm:text-2xl sm:my-0 sm:text-left">
+          <motion.h1 
+            className="text-xl text-center my-4 sm:text-2xl sm:my-0 sm:text-left"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
             Hello! I am <br />
             <span className="text-rose-500 text-3xl sm:text-5xl font-bold">
               Thaddeus
             </span>{" "}
             <br />
             <span>an aspiring full-stack software engineer.</span>
-          </h1>
-          <div className="flex flex-col lg:flex-row items-center justify-end gap-6 md:gap-4 lg:gap-2 text-lg font-medium">
+          </motion.h1>
+          <motion.div 
+            className="flex flex-col lg:flex-row items-center justify-end gap-6 md:gap-4 lg:gap-2 text-lg font-medium"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
             <Link
               href="#contact"
               className="group text-black px-7 py-3 flex items-center gap-2 rounded-full outline-none transition border-2 border-rose-400 shadow-lg hover:shadow-rose-500/50 focus:scale-105 hover:scale-105"
@@ -59,7 +68,7 @@ export default function Hero() {
                 <FiGithub />
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
