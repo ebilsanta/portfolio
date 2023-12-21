@@ -29,8 +29,8 @@ export default function Project({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <section className="bg-gradient-to-r group-even:bg-gradient-to-l from-gray-100 max-w-[36rem] md:max-w-[72rem] rounded-s-lg overflow-hidden sm:pr-8 relative md:h-[22rem] hover:bg-gray-200 transition">
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 lg:pt-10 md:max-w-[60%] lg:max-w-[50%] flex flex-col h-full md:group-even:ml-[16rem] lg:group-even:ml-[30rem] xl:group-even:ml-[36rem]">
+      <section className="bg-gradient-to-r group-even:bg-gradient-to-l from-gray-100 max-w-[36rem] md:max-w-[64rem] rounded-s-lg overflow-hidden sm:pr-8 relative md:h-[22rem] hover:bg-gray-200 transition">
+        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 lg:pt-8 md:max-w-[60%] lg:max-w-[50%] flex flex-col h-full md:group-even:ml-[16rem] lg:group-even:ml-[30rem] xl:group-even:ml-[32rem]">
           <h3 className="text-2xl font-semibold group-hover:text-rose-500 transition">
             {title}
           </h3>
@@ -69,7 +69,7 @@ export default function Project({
           alt="Project I worked on"
           width={imageWidth}
           height={imageHeight}
-          className={`absolute hidden md:block top-3 -right-64 md:-right-72 lg:-right-20 xl:right-0 w-[36rem] rounded-lg
+          className={`absolute hidden md:block top-8 -right-64 md:-right-72 lg:-right-20 xl:right-0 w-[32rem] rounded-lg
           transition group-hover:-translate-x-2 group-even:group-hover:translate-x-2
           group-even:right-[initial] group-even:-left-64 group-even:md:-left-72 group-even:lg:-left-20 group-even:xl:left-0`}
         />

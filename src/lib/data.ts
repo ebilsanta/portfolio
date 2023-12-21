@@ -4,6 +4,45 @@ import { RiPresentationFill } from "react-icons/ri";
 import { MdOndemandVideo } from "react-icons/md";
 import { FaPlay } from "react-icons/fa";
 
+import { CgWorkAlt } from "react-icons/cg";
+import { FaReact } from "react-icons/fa";
+import { LuGraduationCap } from "react-icons/lu";
+import JustDabao from "../../public/just-dabao.svg"
+import KoruPartners from "../../public/koru-partners.svg"
+import Ryde from "../../public/ryde.svg"
+
+export const experiencesData = [
+  {
+    title: "Software Engineer Intern (Incoming)",
+    company: "Ryde Technologies",
+    description: [],
+    icon: React.createElement(Ryde, {style: {"width": 30, "height": 30, "margin": "-15px"}}),
+    date: "Incoming Jan 2024",
+  },
+  {
+    title: "Software Engineer Intern",
+    company: "Koru Partners",
+    description: [
+      "Streamlined fund operations' processes by highlighting discrepancies (Django/Pandas) during reconciliation process", 
+      "Improved human resources' workflow by automating the generation of Asana tasks (Python)",
+      "Improved compliance efforts by implementing authentication for in-house Excel Add-in (C#)",
+    ],
+    icon: React.createElement(KoruPartners, {style: {"width": 34, "height": 34, "margin": "-17px"}}),
+    date: "May 2023 - Aug 2023",
+  },
+  {
+    title: "Software Engineer Intern",
+    company: "Just Dabao",
+    description: [
+      "Refined existing product filter and map features, fixed bugs on Flutter mobile application",
+      "Enhanced accessibility by collaborating with UI team to design and implement dark mode",
+      "Boosted marketing efforts by setting up data analysis tools such as Google Analytics and Amplitude",
+    ],
+    icon: React.createElement(JustDabao, {style: {"width": 34, "height": 34, "margin": "-17px"}}),
+    date: "Jul 2022 - Nov 2022",
+  },
+] as const;
+
 export const projectsData = [
   {
     title: "Gobbler",
