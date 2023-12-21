@@ -7,7 +7,7 @@ import { FiGithub } from "react-icons/fi";
 
 export default function Intro() {
   return (
-    <section className="max-w-[70rem] mb-20">
+    <section className="max-w-[70rem] mb-20 sm:mt-48 sm:mb-96">
       <div className="flex flex-col sm:flex-row gap-0 sm:gap-8 lg:gap-24 items-center justify-center">
         <div className="relative">
           <Image

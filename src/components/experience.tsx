@@ -13,7 +13,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="scroll-mt-24 mb-28 max-w-[64rem]"
+      className="scroll-mt-24 mb-28 sm:mb-72 max-w-[64rem] text-center"
     >
       <h1 className="">My Experience</h1>
       <VerticalTimeline lineColor="rgba(244, 63, 94, 0.2)">
