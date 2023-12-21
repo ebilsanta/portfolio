@@ -5,9 +5,9 @@ import { BsArrowDown, BsLinkedin } from "react-icons/bs";
 import { MdOpenInNew } from "react-icons/md";
 import { FiGithub } from "react-icons/fi";
 
-export default function Intro() {
+export default function Hero() {
   return (
-    <section className="max-w-[70rem] mb-20 sm:mt-48 sm:mb-96">
+    <section className="max-w-[70rem] mb-20 mt-16 sm:mt-48 sm:mb-96">
       <div className="flex flex-col sm:flex-row gap-0 sm:gap-8 lg:gap-24 items-center justify-center">
         <div className="relative">
           <Image
@@ -38,7 +38,7 @@ export default function Intro() {
             <div className="flex items-center gap-2">
               <a
                 className="group text-white bg-rose-500 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition hover:shadow-red-500/50 shadow-lg"
-                href="https://drive.google.com/file/d/1JD0GlKL4tvNN9qwrgutFLcUYt9oip0ks/view?usp=sharing"
+                href="/Lee Zhexian Thaddeus Resume.pdf"
                 target="_blank"
               >
                 Resume

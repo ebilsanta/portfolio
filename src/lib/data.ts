@@ -22,6 +22,29 @@ import JustDabao from "../../public/just-dabao.svg";
 import KoruPartners from "../../public/koru-partners.svg";
 import Ryde from "../../public/ryde.svg";
 
+export const links = [
+  {
+    name: "Home",
+    hash: "#home",
+  },
+  {
+    name: "Projects",
+    hash: "#projects",
+  },
+  {
+    name: "Skills",
+    hash: "#skills",
+  },
+  {
+    name: "Experience",
+    hash: "#experience",
+  },
+  {
+    name: "Contact",
+    hash: "#contact",
+  },
+] as const;
+
 export const experiencesData = [
   {
     title: "Software Engineer Intern (Incoming)",
