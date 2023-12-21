@@ -5,9 +5,10 @@ import { useEffect, useState } from 'react';
 interface SideProps {
   children: React.ReactNode;
   orientation: string;
+  heightToAppear: number;
 }
 
-export default function Side({ children, orientation } : SideProps) {
+export default function Side({ children, orientation, heightToAppear } : SideProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {   
@@ -17,18 +18,18 @@ export default function Side({ children, orientation } : SideProps) {
   }, [])
 
   const listenToScroll = () => {
-    let heightToAppear = 490;
     const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     if (winScroll > heightToAppear) {  
         setIsVisible(true);
     } else {
         setIsVisible(false);
     }  
+    console.log(winScroll)
   };
 
   return (
     isVisible && 
-    <div className={`hidden sm:inline fixed bottom-24 ${orientation === 'left' ? 'left-0 rotate-270 -translate-x-36' : 'right-0 rotate-90 translate-x-36'}`}>
+    <div className={`hidden sm:inline fixed bottom-4 ${orientation === 'left' ? 'left-0 rotate-270 -translate-x-36' : 'right-6'}`}>
       {children}
     </div>
   )

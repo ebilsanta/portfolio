@@ -7,6 +7,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
+import SectionHeading from "./section-heading";
 
 export default function Experience() {
   return (
@@ -14,7 +15,7 @@ export default function Experience() {
       id="experience"
       className="scroll-mt-24 mb-28 sm:mb-72 max-w-[64rem] text-center"
     >
-      <h1 className="">My Experience</h1>
+      <SectionHeading>Experience</SectionHeading>
       <VerticalTimeline lineColor="rgba(244, 63, 94, 0.2)">
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>

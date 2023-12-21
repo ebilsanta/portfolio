@@ -2,6 +2,7 @@
 
 import React from "react";
 import { skillsData } from "@/lib/data";
+import SectionHeading from "./section-heading";
 
 export default function Skills() {
   return (
@@ -9,7 +10,7 @@ export default function Skills() {
       id="skills"
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-72"
     >
-      <h1>My skills</h1>
+      <SectionHeading>Skills</SectionHeading>
       {Object.keys(skillsData).map((section, index) => (
         <React.Fragment key={index}>
           <h2>{section.charAt(0).toUpperCase() + section.slice(1)}</h2>

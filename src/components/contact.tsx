@@ -2,7 +2,7 @@
 
 import React from "react";
 import { MdEmail } from "react-icons/md";
-import Side from "./side";
+import SectionHeading from "./section-heading";
 
 export default function Contact() {
 
@@ -11,7 +11,7 @@ export default function Contact() {
       id="contact"
       className="mb-20 sm:mb-28 text-center"
     >
-      <h1>Contact</h1>
+      <SectionHeading>Contact</SectionHeading>
       <p className="text-gray-700 mb-12">
         Please email me directly at{" "}
         <span className="underline">thaddeusleezx@gmail.com</span>
