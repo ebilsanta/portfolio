@@ -4,9 +4,8 @@ import useScrollDirection from '@/hooks/useScrollDirection';
 import { links } from "@/lib/data";
 
 export default function NavBar(
-  { isHome }: { isHome: boolean }
 ) {
-  const [isMounted, setIsMounted] = useState(!isHome);
+  const [isMounted, setIsMounted] = useState(false);
   const scrollDirection = useScrollDirection({initialDirection: 'down'});
   const [scrolledToTop, setScrolledToTop] = useState(true);
 

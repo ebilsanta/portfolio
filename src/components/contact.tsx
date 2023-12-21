@@ -2,6 +2,7 @@
 
 import React from "react";
 import { MdEmail } from "react-icons/md";
+import Side from "./side";
 
 export default function Contact() {
 
@@ -22,7 +23,6 @@ export default function Contact() {
       >
         Drop me an email <MdEmail />
       </a>
-
     </section>
   );
 }
