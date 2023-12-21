@@ -7,7 +7,6 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
-import { FaPlay } from "react-icons/fa";
 
 export default function Experience() {
   return (
