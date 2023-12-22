@@ -3,7 +3,10 @@ import Side from "@/components/side";
 export default function Email() {
   return (
     <Side orientation="right" heightToAppear={490}>
-      <div className="flex flex-col items-center relative rotate-90 translate-x-36" id="email">
+      <div
+        className="flex flex-col items-center relative rotate-90 translate-x-36"
+        id="email"
+      >
         <div className="after:block after:content-[''] after:w-1 after:h-90 after:m-0 after:mx-auto after:bg-light-slate"></div>
         <a
           href={`mailto:thaddeusleezx@gmail.com`}

@@ -7,7 +7,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
-import SectionHeading from "./section-heading";
+import SectionHeading from "../section-heading";
 
 export default function Experience() {
   return (
@@ -35,20 +35,22 @@ export default function Experience() {
                 fontSize: "1.5rem",
                 border: "#f43f5e 0.13rem solid",
                 boxShadow: "0 0 10px #f43f5e",
-                backgroundColor: "white"
+                backgroundColor: "white",
               }}
             >
               <h3 className="font-semibold capitalize">{item.title}</h3>
               <p className="font-normal !mt-0">{item.company}</p>
               <ul>
                 {item.description.map((desc, index) => (
-                  <li key={index} className="relative pl-5 !mt-1 !font-normal text-gray-700">
+                  <li
+                    key={index}
+                    className="relative pl-5 !mt-1 !font-normal text-gray-700"
+                  >
                     <span className="absolute left-0 top-1 transform rotate-180 border-y-transparent border-s-transparent border-e-rose-500 border-[8px] border-solid"></span>
                     {desc}
                   </li>
                 ))}
               </ul>
-              
             </VerticalTimelineElement>
           </React.Fragment>
         ))}

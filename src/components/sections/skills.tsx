@@ -2,7 +2,7 @@
 
 import React from "react";
 import { skillsData } from "@/lib/data";
-import SectionHeading from "./section-heading";
+import SectionHeading from "../section-heading";
 import { motion } from "framer-motion";
 
 const fadeInAnimationVariants = {
