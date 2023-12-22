@@ -2,6 +2,7 @@ import React from "react";
 import { FiGithub } from "react-icons/fi";
 import { RiPresentationFill } from "react-icons/ri";
 import { MdOndemandVideo } from "react-icons/md";
+import { BsLinkedin } from "react-icons/bs";
 import {
   SiDart,
   SiTypescript,
@@ -226,3 +227,11 @@ export const skillsData = {
     },
   ],
 };
+
+export const socialsData = [
+  {
+    link: "https://linkedin.com/in/thaddeusleezx",
+    icon: React.createElement(BsLinkedin),
+  },
+  { link: "https://github.com/ebilsanta", icon: React.createElement(FiGithub) },
+];

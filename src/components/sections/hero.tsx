@@ -5,6 +5,7 @@ import { BsArrowDown, BsLinkedin } from "react-icons/bs";
 import { MdOpenInNew } from "react-icons/md";
 import { FiGithub } from "react-icons/fi";
 import { motion } from "framer-motion";
+import { socialsData } from "@/lib/data";
 
 export default function Hero() {
   return (
@@ -20,10 +21,11 @@ export default function Hero() {
           />
         </div>
         <div className="flex flex-col gap-2 lg:gap-16">
-          <motion.h1 
+          <motion.h1
             className="text-xl text-center my-4 sm:text-2xl sm:my-0 sm:text-left"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
           >
             Hello! I am <br />
             <span className="text-rose-500 text-3xl sm:text-5xl font-bold">
@@ -32,10 +34,11 @@ export default function Hero() {
             <br />
             <span>an aspiring full-stack software engineer.</span>
           </motion.h1>
-          <motion.div 
+          <motion.div
             className="flex flex-col lg:flex-row items-center justify-end gap-6 md:gap-4 lg:gap-2 text-lg font-medium"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
           >
             <Link
               href="#contact"
@@ -53,20 +56,16 @@ export default function Hero() {
                 Resume
                 <MdOpenInNew className="group-hover:-translate-y-1 transition" />
               </a>
-              <a
-                className="text-white bg-rose-500 p-4 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition hover:shadow-red-500/50 shadow-lg"
-                href="https://linkedin.com/in/thaddeusleezx"
-                target="_blank"
-              >
-                <BsLinkedin />
-              </a>
-              <a
-                className="text-white bg-rose-500 p-4 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition hover:shadow-red-500/50 shadow-lg"
-                href="https://github.com/ebilsanta"
-                target="_blank"
-              >
-                <FiGithub />
-              </a>
+              {socialsData.map((social, index) => (
+                <a
+                  className="text-white bg-rose-500 p-4 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition hover:shadow-red-500/50 shadow-lg"
+                  href={social.link}
+                  target="_blank"
+                  key={index}
+                >
+                  {social.icon}
+                </a>
+              ))}
             </div>
           </motion.div>
         </div>

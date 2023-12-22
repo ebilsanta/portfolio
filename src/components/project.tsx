@@ -27,7 +27,7 @@ export default function Project({
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1.33 1"],
+    offset: ["0 2", "1.33 1"],
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
@@ -43,8 +43,8 @@ export default function Project({
         opacity: opacityProgess,
       }}
     >
-      <section className="bg-gradient-to-r group-even:bg-gradient-to-l from-gray-100 max-w-[36rem] md:max-w-[64rem] rounded-s-lg overflow-hidden sm:pr-8 relative md:h-[22rem] hover:bg-gray-200 transition">
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 lg:pt-8 md:max-w-[60%] lg:max-w-[50%] flex flex-col h-full md:group-even:ml-[16rem] lg:group-even:ml-[30rem] xl:group-even:ml-[32rem]">
+      <section className="bg-gradient-to-r group-even:bg-gradient-to-l from-gray-100 max-w-[36rem] md:max-w-[50rem] lg:max-w-[60rem] rounded-s-lg overflow-hidden sm:pr-8 relative md:h-[22rem] hover:bg-gray-200 transition">
+        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 lg:pt-8 md:max-w-[60%] lg:max-w-[48%] flex flex-col h-full md:group-even:ml-[16rem] lg:group-even:ml-[30rem] xl:group-even:ml-[32rem]">
           <h3 className="text-2xl font-semibold group-hover:text-rose-500 transition">
             {title}
           </h3>

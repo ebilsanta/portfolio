@@ -33,10 +33,10 @@ export default function Side({
   return (
     isVisible && (
       <div
-        className={`hidden sm:inline fixed bottom-4 ${
+        className={`hidden sm:inline fixed bottom-0 ${
           orientation === "left"
-            ? "left-0 rotate-270 -translate-x-36"
-            : "right-6"
+            ? "left-0"
+            : "right-0"
         }`}
       >
         {children}

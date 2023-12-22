@@ -5,6 +5,7 @@ import './globals.css'
 import NavBar from "@/components/navbar";
 import Email from '@/components/email';
 import Return from '@/components/return';
+import Socials from '@/components/socials';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,7 +20,8 @@ export default function RootLayout({
       <title>Thaddeus&apos; Portfolio</title>
       <body className={inter.className}>
         <NavBar/>
-        {/* <Email/> */}
+        <Email/>
+        <Socials/>
         <Return/>
         {children}
       </body>
