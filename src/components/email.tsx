@@ -18,8 +18,6 @@ export default function Email() {
           <motion.a
             href={`mailto:thaddeusleezx@gmail.com`}
             className="mt-20 mx-auto px-10 font-mono text-xxs leading-lg tracking-wide"
-            // animate={{ opacity: 1, x: 0, y: 0,  transition: { duration: 1 } }}
-            // initial={{ opacity: 0, x: 30, y: 30 }}
           >
             thaddeusleezx@gmail.com
           </motion.a>

@@ -1,9 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { BsArrowDown, BsLinkedin } from "react-icons/bs";
+import { BsArrowDown } from "react-icons/bs";
 import { MdOpenInNew } from "react-icons/md";
-import { FiGithub } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { socialsData } from "@/lib/data";
 
@@ -25,7 +24,7 @@ export default function Hero() {
             className="text-xl text-center my-4 sm:text-2xl sm:my-0 sm:text-left"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.4 }}
           >
             Hello! I am <br />
             <span className="text-rose-500 text-3xl sm:text-5xl font-bold">

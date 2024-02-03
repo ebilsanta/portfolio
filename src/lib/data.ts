@@ -48,13 +48,15 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Software Engineer Intern (Incoming)",
+    title: "Software Engineer Intern",
     company: "Ryde Technologies",
-    description: [],
+    description: [
+      "Enhanced driver onboarding by developing Go microservice for Document AI and Image Question Answering tasks"
+    ],
     icon: React.createElement(Ryde, {
       style: { width: 30, height: 30, margin: "-15px" },
     }),
-    date: "Incoming Jan 2024",
+    date: "Jan 2024 - Present",
   },
   {
     title: "Software Engineer Intern",
