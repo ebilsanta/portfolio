@@ -51,7 +51,8 @@ export const experiencesData = [
     title: "Software Engineer Intern",
     company: "Ryde Technologies",
     description: [
-      "Enhanced driver onboarding by developing Go microservice for Document AI and Image Question Answering tasks"
+      "Enhanced driver onboarding by developing Go microservice for Document AI and Image Question Answering tasks",
+      "Minimized future development and maintenance costs by migrating native mobile applications to Flutter"
     ],
     icon: React.createElement(Ryde, {
       style: { width: 30, height: 30, margin: "-15px" },
@@ -116,7 +117,7 @@ export const projectsData = [
       {
         label: "project video link",
         icon: React.createElement(MdOndemandVideo, { size: 28 }),
-        url: "https://www.youtube.com/watch?v=rpT6hkMRsbQ&ab_channel=ThaddeusLee ",
+        url: "https://www.youtube.com/watch?v=rpT6hkMRsbQ&ab_channel=ThaddeusLee",
       },
       {
         label: "project presentation slides",
@@ -129,7 +130,7 @@ export const projectsData = [
     title: "Authentication App",
     description:
       "A custom authentication service utilizing OAuth 2.0 extensions <em> Proof Key for Code Exchange </em> (PKCE) and <em> Demonstrating Proof-of-Possession </em> (DPoP) to ensure authenticity and confidentiality when working with public clients (eg. SPAs). Architected to be highly scalable and available on AWS.",
-    tags: ["Go", "FastAPI (Python)", "ExpressJS", "Next.js", "AWS", "gRPC"],
+    tags: ["Go", "FastAPI (Python)", "Express", "Next.js", "AWS", "gRPC"],
     mainImageUrl: "/authentication-app-1.png",
     mainHeight: 2936,
     mainWidth: 1666,
@@ -192,6 +193,30 @@ export const projectsData = [
       },
     ],
   },
+  {
+    title: "Gift Redemption App",
+    description:
+      "A simple application to search for employees and redeem gifts. Optimized search function using <em>API pagination</em> and <em>lazy loading</em> on the frontend with <em>debouncing</em> and <em>caching</em>.",
+    tags: ["React", "Express", "Prisma", "TypeScript"],
+    mainImageUrl: "/gift-redemption-1.png",
+    mainHeight: 2398,
+    mainWidth: 1501,
+    secondaryImageUrl: "/gift-redemption-2.png",
+    secondaryHeight: 2398,
+    secondaryWidth: 1498,
+    links: [
+      {
+        label: "github link",
+        icon: React.createElement(FiGithub, { size: 28 }),
+        url: "https://github.com/ebilsanta/gt-takehome",
+      },
+      {
+        label: "live application",
+        icon: React.createElement(FaPlay, { size: 28 }),
+        url: "https://gift-redemption-frontend.vercel.app/",
+      },
+    ],
+  },
 ] as const;
 
 export const skillsData = {
@@ -210,7 +235,7 @@ export const skillsData = {
     },
   ],
   frameworks: [
-    { name: "ExpressJS", icon: React.createElement(SiExpress, { size: 28 }) },
+    { name: "Express", icon: React.createElement(SiExpress, { size: 28 }) },
     { name: "FastAPI", icon: React.createElement(SiFastapi, { size: 28 }) },
     {
       name: "Springboot",
